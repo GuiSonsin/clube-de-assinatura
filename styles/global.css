@@ -27,21 +27,21 @@
 
     --ff-base: 'Relaway', sans-serif;
 
-    --title-lg: bold 3rem var(--ff-base);
-    --title-md: bold 2.5rem var(--ff-base);
-    --title-sm: bold 2rem var(--ff-base);
-    --title-xs: bold 1rem var(--ff-base);
+    --title-lg: 700 3rem var(--ff-base);
+    --title-md: 700 2.5rem var(--ff-base);
+    --title-sm: 700 2rem var(--ff-base);
+    --title-xs: 700 1rem var(--ff-base);
 
-    --subtitle: medium 2rem/2.0 var(--ff-base);
+    --subtitle: 500 2rem/2.0 var(--ff-base);
 
     --body-lg: 1.25rem/1.4 var(--ff-base);
     --body-md: 1rem/1.4 var(--ff-base);
     --body-sm: 0.875rem/1.4 var(--ff-base);
     --body-xs: 0.75rem/1.4 var(--ff-base);
 
-    --button: bold 0.875rem var(--ff-base);
-    --link: medium 0.875rem var(--ff-base);
-    --tag: bold 0.625rem var(--ff-base);
+    --button: 700 0.875rem var(--ff-base);
+    --link: 500 0.875rem var(--ff-base);
+    --tag: 700 0.625rem var(--ff-base);
 }
 
 body{ 

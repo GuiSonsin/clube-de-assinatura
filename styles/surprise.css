@@ -1,0 +1,46 @@
+section.surprise{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 80rem;
+    margin-inline: auto;
+    align-items: center;
+    padding: 6rem 6.5rem 9.5625rem;
+
+    & span{
+        color: var(--blue-light);
+    }
+
+    & .image-surprise-1{
+        & img{
+            width: 5.5rem;
+            height: 5.5rem;
+            rotate: 20.75deg;
+        }
+    }
+
+    & .image-surprise-2{
+        display: flex;
+        width: 100%;
+        align-items: center;
+        justify-content: space-between;
+
+        & img:first-child{
+            width: 5rem;
+            height: 5rem;
+            rotate: 99.47deg;
+        }
+
+        & img:last-child{
+            width: 4.5rem;
+            height: 4.5rem;
+            rotate: -14.48deg;
+        }
+    }
+
+    & p {
+        text-align: center;
+        font: var(--subtitle);
+        color: var(--text-body);
+    }
+}
