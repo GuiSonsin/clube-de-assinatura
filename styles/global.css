@@ -43,3 +43,12 @@
     --link: medium 0.875rem var(--ff-base);
     --tag: bold 0.625rem var(--ff-base);
 }
+
+body{ 
+    background-color: var(--shape-background);  
+}
+
+a{
+    text-decoration: none; 
+    color: inherit;
+}
