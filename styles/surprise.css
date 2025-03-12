@@ -106,22 +106,18 @@ section.surprise:hover {
             transition: opacity 0.1s ease-in-out 1.5s;  
         }
 
-        & img[src*= "ball"] {
-            transition: transform 0.3s ease-in-out;
+        & img:nth-child(1){
+            transition: transform 0.1s ease-in-out, opacity 0.1s ease-in-out 1s;
         }
-         
-        & img[src*= "ball"]:hover {
+
+        & img:nth-child(2){
+            transition: transform 0.1s ease-in-out, opacity 0.1s ease-in-out 1.5s;
+        }
+
+        & img[src*= "ball"]:hover,
+        & img[src*= "planchette"]:hover  {
             transform: scale(1.1) rotate(10deg);
         }
-        
-        & img[src*= "planchette"] {
-            transition: transform 0.3s ease-in-out;
-        }
-         
-        & img[src*= "planchette"]:hover {
-            transform: scale(1.1) rotate(10deg);
-        }
-        
     } 
 
     & .text-container p {
