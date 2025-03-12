@@ -83,6 +83,6 @@ section.hero {
         font: var(--body-lg);
         color: var(--text-body);
         font-weight: regular;
-        opacity: 0.5;
+        opacity: 0.5;  
     }
 }

@@ -8,7 +8,7 @@ section.surprise{
     padding: 6rem 6.5rem 9.5625rem;
 
     & span{
-        color: var(--blue-light);
+        color: var(--text-body);
     }
 
     & .image-surprise-1{
@@ -42,7 +42,7 @@ section.surprise{
         text-align: center;
         font: var(--subtitle);
         color: var(--text-body);
-        
+        opacity: .5;
     }
     
 }
@@ -72,14 +72,6 @@ section.surprise{
             opacity: 0;  
             transition: opacity 0.5s ease-in 1s;  
         }
-    }
-
-    & span{
-        color: var(--text-body);
-    }
-
-    & p{
-        opacity: 0.5;
     }
 }
 
@@ -118,6 +110,22 @@ section.surprise:hover {
             transform: scale(1.1) rotate(10deg);  
         }
     } 
+
+    .color-change:nth-child(1) {
+        color: var(--blue-light); 
+        transition: color 1s ease-in-out;  
+        
+    }
+    
+    .color-change:nth-child(2) {
+        color: var(--blue-light);  
+        transition: color 1s ease-in-out 0.5s;  
+    }
+
+    .color-change:nth-child(3) {
+        color: var(--blue-light); 
+        transition: color 1s ease-in-out 1s;  
+    }
 }
 
 section.surprise:not(:hover) {
