@@ -1,22 +1,108 @@
 section.magic-book{
     display: flex;
     flex-direction: column;
-    gap: 5px;
-    margin-bottom: 5.5rem;
+    gap: 5.5rem;
 
-    & .title{
+    & header{
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+
+        & .title{
+            display: flex;
+            align-items: center;
+            justify-content: center; 
+            margin-inline: auto;
+            width: 100%;
+            gap: 1rem;
+        }
+    
+        & p{
+            text-align: center;
+            font: var(--body-md);
+            color: var(--text-body);
+            opacity: 0.9;
+        }
+    }
+    
+    & .book{
         display: flex;
         align-items: center;
-        justify-content: center; 
-        margin-inline: auto;
+        justify-content: center;
+        overflow: hidden;
+        flex-wrap: wrap;
+        position: relative;
+        margin-bottom: 50rem;
         width: 100%;
-        gap: 1rem;
+        height: 1000px;
+        padding-top: 5.5rem;
+
+        & .book-animate{ 
+            img{
+                width: 100%;
+                max-height: 39rem;
+                object-fit: cover;
+            }
+        }
+
+        & .animation{ 
+            position: absolute;
+            opacity: 0;
+            
+
+            & img:nth-child(1){
+                width: 10.75rem;
+                height: 33.5rem; 
+                position: inherit;
+                z-index: -1;
+                transform: translate(11.5rem, -25rem) rotate(12deg);
+            }
+
+            & img:nth-child(2){
+                width: 10.75rem;
+                height: 33.5rem; 
+                position: inherit;
+                z-index: -2;
+                transform: translate(17rem, -15rem) rotate(22deg);
+            }
+
+            & img:nth-child(3){
+                width: 13.875rem;
+                height: 15.875rem;
+                position: inherit;
+                z-index: -1;
+                transform: translate(-23.8rem, 9.5rem) rotate(-8deg);
+
+            }
+            
+            & img:nth-child(4){
+                width: 6.5625rem;
+                height: 7.9375;
+                position: inherit;
+                transform: translate(-26.5rem, 4.5rem);
+            }
+
+            & img:nth-child(5){
+                width: 9.0625rem;
+                height: 9.5rem;
+                position: inherit;
+                transform: translate(15rem, 16rem);
+
+            }
+
+            & img:nth-child(6){
+                width: 10.9375rem;
+                height: 1.875rem;
+                position: inherit;
+                
+                transform: translate(-23rem, -21rem);
+            }
+        }
     }
 
-    & p{
-        text-align: center;
-        font: var(--body-md);
-        color: var(--text-body);
-        opacity: 0.9;
+    & .book:hover{
+        & .animation{
+            opacity: 1;
+        }
     }
 }
