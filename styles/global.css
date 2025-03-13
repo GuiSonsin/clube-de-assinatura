@@ -57,3 +57,8 @@ h1{
     font: var(--title-lg);
     color: var(--text-title);
 }
+
+h2{
+    font: var(--title-sm);
+    color: var(--text-title);
+}
