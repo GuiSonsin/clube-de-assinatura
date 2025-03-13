@@ -49,7 +49,6 @@ section.magic-book{
             position: absolute;
             opacity: 0;
             
-
             & img:nth-child(1){
                 width: 10.75rem;
                 height: 33.5rem; 
@@ -72,7 +71,6 @@ section.magic-book{
                 position: inherit;
                 z-index: -1;
                 transform: translate(-23.8rem, 9.5rem) rotate(-8deg);
-
             }
             
             & img:nth-child(4){
@@ -87,7 +85,6 @@ section.magic-book{
                 height: 9.5rem;
                 position: inherit;
                 transform: translate(15rem, 16rem);
-
             }
 
             & img:nth-child(6){
@@ -96,6 +93,28 @@ section.magic-book{
                 position: inherit;
                 
                 transform: translate(-23rem, -21rem);
+            }
+
+            & p{ 
+                font: var(--body-md);
+                color: var(--text-body);
+                opacity: .9; 
+                width: max-content;
+            }
+
+            & p:nth-child(7){  
+                position: absolute;
+                transform: translate(-26.5rem, -23rem);
+            }
+
+            & p:nth-child(8){  
+                position: absolute;
+                transform: translate(-26.8rem, 2.5rem);
+            }
+
+            & p:nth-child(9){  
+                position: absolute;
+                transform: translate(11rem, 26rem); 
             }
         }
     }
