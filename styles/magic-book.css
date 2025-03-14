@@ -33,7 +33,7 @@ section.magic-book{
         flex-wrap: wrap;
         position: relative; 
         width: 100%; 
-        padding-top: 5.5rem;
+        height: 55rem; 
 
         & .book-animate{ 
             img{
@@ -43,27 +43,49 @@ section.magic-book{
             }
         }
 
-        & .animation{ 
-            position: absolute;
-            opacity: 0;  
-
-            & img:nth-child(1){
+        & .animation-1{ 
+            & img[src*="yellow"]{
                 width: 10.75rem;
                 height: 33.5rem; 
                 position: inherit;
                 z-index: -1;
-                transform: translate(11.5rem, -25rem) rotate(12deg);
-            }
+                transform: translate(-3.5rem, -25rem) rotate(12deg);
+            } 
 
-            & img:nth-child(2){
+            & img[src*="purple"]{
                 width: 10.75rem;
                 height: 33.5rem; 
                 position: inherit;
                 z-index: -2;
-                transform: translate(17rem, -15rem) rotate(22deg);
+                transform: translate(2.5rem, -15rem) rotate(22deg);
             }
 
-            & img:nth-child(3){
+            
+            & img[src*="2"]{
+                width: 9.0625rem;
+                height: 9.5rem;
+                position: inherit;
+                transform: translate(1rem, 16rem);
+            }
+    
+            & p{ 
+                font: var(--body-md);
+                color: var(--text-body);
+                opacity: .9; 
+                width: max-content;
+            }
+
+            & p{  
+                position: absolute;
+                transform: translate(-4rem, 26rem); 
+            } 
+        }
+        
+        & .animation-2{
+            position: absolute;
+            opacity: 0;  
+            
+            & img[src*="pin"]{
                 width: 13.875rem;
                 height: 15.875rem;
                 position: inherit;
@@ -71,25 +93,34 @@ section.magic-book{
                 transform: translate(-23.8rem, 9.5rem) rotate(-8deg);
             }
             
-            & img:nth-child(4){
+            & img[src*="1"]{
                 width: 6.5625rem;
                 height: 7.9375;
                 position: inherit;
                 transform: translate(-26.5rem, 4.5rem);
             }
 
-            & img:nth-child(5){
-                width: 9.0625rem;
-                height: 9.5rem;
-                position: inherit;
-                transform: translate(15rem, 16rem);
+            & p{ 
+                font: var(--body-md);
+                color: var(--text-body);
+                opacity: .9; 
+                width: max-content;
             }
+            
+            & p{  
+                position: absolute;
+                transform: translate(-26.8rem, 2.5rem);
+            }
+        }
 
-            & img:nth-child(6){
+        & .animation-3{
+            position: absolute;
+            opacity: 0;  
+
+            & img[src*="3"]{
                 width: 10.9375rem;
                 height: 1.875rem;
                 position: inherit;
-                
                 transform: translate(-23rem, -21rem);
             }
 
@@ -100,40 +131,144 @@ section.magic-book{
                 width: max-content;
             }
 
-            & p:nth-child(7){  
+            & p{  
                 position: absolute;
                 transform: translate(-26.5rem, -23rem);
             }
+        }
 
-            & p:nth-child(8){  
-                position: absolute;
-                transform: translate(-26.8rem, 2.5rem);
-            }
+        & .animation-1 .animation-1a{  
+            position: absolute;
+            opacity: 0;
+        }
 
-            & p:nth-child(9){  
-                position: absolute;
-                transform: translate(11rem, 26rem); 
-                animation-delay: 2s;
-            }
+        & .animation-1 .animation-1b{
+            position: absolute;
+            opacity: 0;
+        }
+
+        & .animation-1 .animation-1c{
+            position: absolute;
+            opacity: 0;
         }
     }
 
     & .book:hover{
-        & .animation{
-             opacity: 1;
-             z-index: -1;
-             animation: showAnimation .5s ease-in-out ;
+        & .animation-1a{
+            opacity: 1;
+            z-index: -1;
+            animation: showAnimationRight 0.5s ease-in-out;
         }
+
+        & .animation-1b{
+                opacity: 1;
+                z-index: -2;
+                animation: showAnimationRight-2 0.6s ease-in-out;
+        }
+
+        & .animation-1c{
+            opacity: 1;
+            z-index: -2;
+            animation: showAnimationRight-3 0.7s ease-in-out;
+        }
+
+        & .animation-2{
+             opacity: 1;
+             z-index: -1;   
+
+             animation: showAnimationLeft 0.5s ease-in-out;
+        }
+
+        & .animation-3{
+            opacity: 1;
+            z-index: -1; 
+            
+            animation: showAnimationLeft 0.5s ease-in-out;
+       }
+    }
+
+    & .book:not(:hover) {
+        & .animation-1a {
+            opacity: 0;
+            z-index: -1;
+            transform: translate(-15rem, 10rem) rotate(-12deg); 
+            transition: opacity 1s ease-out, transform 0.8s ease-out;
+        }
+    
+        & .animation-1b {
+            opacity: 0;
+            z-index: -1;
+            transform: translate(-20.5rem, 0rem) rotate(-22deg);
+            transition: opacity 1s ease-out, transform 1s ease-out;
+        }
+    
+        & .animation-1c {
+            opacity: 0;
+            z-index: -1;
+            transform: translate(-15rem, -16rem);
+            transition: opacity 0.5s ease-out, transform 1s ease-out;
+        }
+    
+        & .animation-2 {
+            opacity: 0;
+            z-index: -1;
+            transform: translate(23rem, -9.5rem) rotate(8deg);
+            transition: opacity 0.5s ease-out, transform 1s ease-out;
+        }
+    
+        & .animation-3 {
+            opacity: 0;
+            z-index: -1;
+            transform: translate(23rem, 21rem);
+            transition: opacity 0.5s ease-out, transform 1s ease-out;
+        }
+    }
+    
+}
+
+@keyframes showAnimationRight {
+    0%{
+        opacity: 0;
+        transform: translate(-13rem, 8rem) rotate(0deg);
+    }
+
+    100%{
+        opacity: 1;
+        transform: translate(0rem, 0rem) rotate(0deg);
     }
 }
 
-@keyframes showAnimation {
+@keyframes showAnimationRight-2 {
+    0%{
+        opacity: 0;
+        transform: translate(-13rem, 0rem) rotate(0deg);
+    }
+
+    100%{
+        opacity: 1;
+        transform: translate(0rem, 0rem) rotate(0deg);
+    }
+}
+
+@keyframes showAnimationRight-3 {
+    0%{
+        opacity: 0;
+        transform: translate(-13rem, -10rem) rotate(0deg);
+    }
+
+    100%{
+        opacity: 1;
+        transform: translate(0rem, 0rem) rotate(0deg);
+    }
+}
+
+@keyframes showAnimationLeft {
     0% {
         opacity: 0;
-        transform: translateY(50px) scale(0.5);
+        transform:  translateY(20px) translateX(200px) scale(0.5);
     }
     100% {
         opacity: 1;
-        transform: translateY(0) scale(1);
+        transform: translateY(0px) translateX(0) scale(1);
     }
 }
