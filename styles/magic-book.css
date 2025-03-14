@@ -44,24 +44,24 @@ section.magic-book{
         }
 
         & .animation-1{ 
-            & img[src*="yellow"]{
+            & .animation-1a img[src*="yellow"]{
                 width: 10.75rem;
                 height: 33.5rem; 
                 position: inherit;
                 z-index: -1;
-                transform: translate(-3.5rem, -25rem) rotate(12deg);
+                transform: translate(-5.5rem, -25rem);
             } 
 
-            & img[src*="purple"]{
+            & .animation-1b img[src*="purple"]{
                 width: 10.75rem;
                 height: 33.5rem; 
                 position: inherit;
                 z-index: -2;
-                transform: translate(2.5rem, -15rem) rotate(22deg);
+                transform: translate(2.5rem, -18rem);
             }
 
             
-            & img[src*="2"]{
+            & .animation-1c img[src*="2"]{
                 width: 9.0625rem;
                 height: 9.5rem;
                 position: inherit;
@@ -75,7 +75,7 @@ section.magic-book{
                 width: max-content;
             }
 
-            & p{  
+            & .animation-1c p{  
                 position: absolute;
                 transform: translate(-4rem, 26rem); 
             } 
@@ -157,13 +157,13 @@ section.magic-book{
         & .animation-1a{
             opacity: 1;
             z-index: -1;
-            animation: showAnimationRight 0.5s ease-in-out;
+            animation: showAnimationRight 0.5s ease-in-out forwards;
         }
 
         & .animation-1b{
                 opacity: 1;
                 z-index: -2;
-                animation: showAnimationRight-2 0.6s ease-in-out;
+                animation: showAnimationRight-2 0.6s ease-in-out forwards;
         }
 
         & .animation-1c{
@@ -189,30 +189,24 @@ section.magic-book{
 
     & .book:not(:hover) {
         & .animation-1a {
-            opacity: 0;
-            z-index: -1;
-            transform: translate(-15rem, 10rem) rotate(-12deg); 
-            transition: opacity 1s ease-out, transform 0.8s ease-out;
+            z-index: -1; 
+            animation: hideAnimationRight 0.5s ease-out forwards;
         }
     
-        & .animation-1b {
-            opacity: 0;
+        & .animation-1b { 
             z-index: -1;
-            transform: translate(-20.5rem, 0rem) rotate(-22deg);
-            transition: opacity 1s ease-out, transform 1s ease-out;
+            animation: hideAnimationRight-2 0.5s ease-out forwards;
         }
     
-        & .animation-1c {
-            opacity: 0;
+        & .animation-1c { 
             z-index: -1;
-            transform: translate(-15rem, -16rem);
-            transition: opacity 0.5s ease-out, transform 1s ease-out;
+            animation: hideAnimationRight-3 0.5s ease-out forwards;
         }
     
         & .animation-2 {
             opacity: 0;
             z-index: -1;
-            transform: translate(23rem, -9.5rem) rotate(8deg);
+            transform: translate(23rem, -9.5rem);
             transition: opacity 0.5s ease-out, transform 1s ease-out;
         }
     
@@ -234,7 +228,7 @@ section.magic-book{
 
     100%{
         opacity: 1;
-        transform: translate(0rem, 0rem) rotate(0deg);
+        transform: translate(0rem, 0rem) rotate(12deg);
     }
 }
 
@@ -246,19 +240,19 @@ section.magic-book{
 
     100%{
         opacity: 1;
-        transform: translate(0rem, 0rem) rotate(0deg);
+        transform: translate(0rem, 0rem) rotate(22deg);
     }
 }
 
 @keyframes showAnimationRight-3 {
     0%{
         opacity: 0;
-        transform: translate(-13rem, -10rem) rotate(0deg);
+        transform: translate(-13rem, -10rem);
     }
 
     100%{
         opacity: 1;
-        transform: translate(0rem, 0rem) rotate(0deg);
+        transform: translate(0rem, 0rem);
     }
 }
 
@@ -270,5 +264,38 @@ section.magic-book{
     100% {
         opacity: 1;
         transform: translateY(0px) translateX(0) scale(1);
+    }
+}
+
+@keyframes hideAnimationRight {
+    0% {
+        opacity: 1;
+        transform: translate(0rem, 0rem) rotate(12deg);
+    }
+    100% {
+        opacity: 0;
+        transform: translate(-13rem, 8rem) rotate(0deg);
+    }
+}
+
+@keyframes hideAnimationRight-2 {
+    0% {
+        opacity: 1;
+        transform: translate(0rem, 0rem) rotate(22deg);
+    }
+    100% {
+        opacity: 0;
+        transform: translate(-13rem, 0rem) rotate(0deg);
+    }
+}
+
+@keyframes hideAnimationRight-3 {
+    0% {
+        opacity: 1;
+        transform: translate(0rem, 0rem);
+    }
+    100% {
+        opacity: 0;
+        transform: translate(-13rem, -10rem);
     }
 }
