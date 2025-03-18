@@ -58,6 +58,8 @@ section.signature{
         display: flex;
         flex-direction: row; 
         position: relative;
+        width: max-content;
+        align-items: center;
         z-index: 1;
 
         & a{
@@ -105,8 +107,9 @@ section.signature{
         }
 
         & .card:nth-child(1){  
+            position: absolute;
             z-index: -1;
-            transform: translate(0rem , 8rem) rotate(-8deg);
+            transform: translate(-27rem , 23rem) rotate(-8deg);
 
             & .header{
 
@@ -184,7 +187,8 @@ section.signature{
         }
 
         & .card:nth-child(2){  
-            transform: translate(0rem , 4rem);
+            transform: translate(-9rem , 20rem);
+            position: absolute;
 
             & .header{
 
@@ -263,7 +267,8 @@ section.signature{
 
         & .card:nth-child(3){  
             z-index: -1;
-            transform: translate(0rem , 8rem) rotate(8deg);
+            transform: translate(9rem , 23rem) rotate(8deg);
+            position: absolute;
 
             & .header{
 
@@ -346,33 +351,39 @@ section.signature{
         background-color: var(--shape-hover);
     }
 
+    & .pricing:not(:hover){
+        & .card:nth-child(2){
+            background-color: var(--shape-hover);
+        }
+    }
+
     & .pricing .card:nth-child(1):hover{
         z-index: 1; 
 
-        transform: translate(0rem , 7.5rem) rotate(-8deg);
+        transform: translate(-27rem , 22rem) rotate(-8deg);
 
-        box-shadow: 0 30px 100px .5px var(--shape-hover);
+        box-shadow: 0 30px 50px .5px var(--shape-hover);
     }
 
     & .pricing .card:nth-child(2):hover{ 
         z-index: 1;
-        transform: translate(0rem, 3.5rem);
+        transform: translate(-9rem , 19rem);
         transition: transform 500ms ease-in-out; 
 
-        box-shadow: 0 30px 100px .5px var(--shape-hover);
+        box-shadow: 0 30px 50px .5px var(--shape-hover);
     }
 
     & .pricing .card:nth-child(3):hover{ 
         z-index: 1; 
 
-        transform: translate(0rem , 7.5rem) rotate(8deg);
+        transform: translate(9rem , 22rem) rotate(8deg);
 
-        box-shadow: 0 30px 100px .5px var(--shape-hover);
+        box-shadow: 0 30px 50px .5px var(--shape-hover);
     }
 
     & .pricing img[src*= "bunny"]{
         position: absolute;
-        transform: translate(20rem, 1rem);
+        transform: translate(-6rem, 5.5rem);
         width: 2.8125rem;
         height: 3.125rem;
         transition: transform 500ms ease-in-out;
@@ -395,7 +406,7 @@ section.signature{
     }
     
     & .pricing .card:nth-child(2):hover ~ img[src*="bunny"] {
-        transform: translate(20rem, 0.5rem);
+        transform: translate(-6rem, 4.5rem);
         z-index: 2;
     }
 
@@ -405,7 +416,7 @@ section.signature{
         & img:first-child{
             width: 1.625rem;
             height: 1.625rem;
-            transform: translate(-3rem, 8rem);
+            transform: translate(-30rem, 11rem);
             
             animation: roundReverseRight 500ms ease-in-out;
         }
@@ -413,7 +424,7 @@ section.signature{
         & img:last-child{
             width: 0.8125rem;
             height: 0.8125rem;
-            transform: translate(-5.5rem, 9.5rem);
+            transform: translate(-31rem, 12rem);
 
             animation: roundReverseLeft 500ms ease-in-out;
         }
@@ -425,7 +436,7 @@ section.signature{
         & img:first-child{
             width: 1.625rem;
             height: 1.625rem;
-            transform: translate(53rem, 35rem);
+            transform: translate(26rem, 37.5rem);
 
             animation: roundReverseLeft2 500ms ease-in-out;
         }
@@ -433,7 +444,7 @@ section.signature{
         & img:last-child{
             width: 0.8125rem;
             height: 0.8125rem;
-            transform: translate(49.5rem, 36rem);
+            transform: translate(24rem, 38rem);
 
             animation: roundReverseRight2 500ms ease-in-out;
         }
@@ -444,41 +455,41 @@ section.signature{
 
 @keyframes turnRight {
     from {
-        transform: translate(-3rem, 8rem) rotate(0);
+        transform: translate(-30rem, 11rem) rotate(0);
     }
     
     to {
-        transform: translate(-3rem, 8rem) rotate(-20deg);
+        transform: translate(-30rem, 11rem) rotate(-20deg);
     }
 }
 
 @keyframes turnLeft {
     from {
-        transform: translate(-5.5rem, 9.5rem) rotate(0);
+        transform: translate(-31rem, 12rem) rotate(0);
     }
     
     to {
-        transform: translate(-5.5rem, 9.5rem) rotate(20deg);
+        transform: translate(-31rem, 12rem) rotate(20deg);
     }
 }
 
 @keyframes roundReverseRight {
     from {
-        transform: translate(-3rem, 8rem) rotate(-20deg);
+        transform: translate(-30rem, 11rem) rotate(-20deg);
     }
 
     to {
-        transform: translate(-3rem, 8rem) rotate(0deg);
+        transform: translate(-30rem, 11rem) rotate(0deg);
     }
 }
 
 @keyframes roundReverseLeft {
     from {
-        transform: translate(-5.5rem, 9.5rem) rotate(20deg);
+        transform: translate(-31rem, 12rem) rotate(20deg);
     }
 
     to {
-        transform: translate(-5.5rem, 9.5rem) rotate(0deg);
+        transform: translate(-31rem, 12rem) rotate(0deg);
     }
 }
 
@@ -486,40 +497,40 @@ section.signature{
 
 @keyframes turnRight2 {
     from {
-        transform: translate(49.5rem, 36rem) rotate(0);
+        transform: translate(24rem, 38rem) rotate(0);
     }
     
     to {
-        transform: translate(49.5rem, 36rem) rotate(-20deg);
+        transform: translate(24rem, 38rem) rotate(-20deg);
     }
 }
 
 @keyframes turnLeft2 {
     from {
-        transform: translate(53rem, 35rem) rotate(0);
+        transform: translate(26rem, 37.5rem) rotate(0);
     }
     
     to {
-        transform: translate(53rem, 35rem) rotate(20deg);
+        transform: translate(26rem, 37.5rem) rotate(20deg);
     }
 }
 
 @keyframes roundReverseRight2 {
     from {
-        transform: translate(49.5rem, 36rem) rotate(-20deg);
+        transform: translate(24rem, 38rem) rotate(-20deg);
     }
 
     to {
-        transform: translate(49.5rem, 36rem) rotate(0deg);
+        transform: translate(24rem, 38rem) rotate(0deg);
     }
 }
 
 @keyframes roundReverseLeft2 {
     from {
-        transform: translate(53rem, 35rem) rotate(20deg);
+        transform: translate(26rem, 37.5rem) rotate(20deg);
     }
 
     to {
-        transform: translate(53rem, 35rem) rotate(0deg);
+        transform: translate(26rem, 37.5rem) rotate(0deg);
     }
 }
