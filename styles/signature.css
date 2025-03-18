@@ -22,26 +22,191 @@ section.signature{
         height: 26rem;
     }
 
+    & ul{
+        display: flex;
+        flex-direction: column;
+        list-style-type: none; 
+        padding-left: 1.5rem;
+        gap: .75rem;
+    }
+
+    & li{
+        position: relative;
+        font: var(--body-xs);
+        color: var(--text-body);
+        opacity: 0.9;
+    }
+
+    & li::before{
+        content: "";
+        position: absolute;
+        transform: translateX(-1.5rem); 
+        width: .875rem;
+        height: .875rem;
+    }
+
     & .pricing{
         display: flex;
-        flex-direction: row;
-        gap: 5rem;  
+        flex-direction: row; 
+
+        & .card{
+            display: flex;
+            flex-direction: column; 
+            padding: 2rem;
+            position: relative;
+            justify-content: space-between;
+        }
+
+        & .price{
+            display: flex;
+            flex-direction: column;
+            gap: .5rem;
+        }
+
+        & .header{
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+        }
 
         & .card:nth-child(1){  
-            position: inherit;
             z-index: -1;
-            transform: translate(5rem , 8rem) rotate(-8deg);
+            transform: translate(0rem , 8rem) rotate(-8deg);
+
+            & .header{
+
+                & > p{
+                    font: var(--title-xs);
+                    color: var(--blue-light);
+                }
+
+                & .price{
+
+                    & p{
+                        font: var(--title-md);
+                        color: var(--text-title);
+
+                        & small{
+                            color: inherit;
+                            font: var(--title-xs);
+                        }
+
+                        & .lower {
+                            position: relative;
+                            top: 4px; 
+                        }
+                    }
+
+                    & p + small{
+                        font: var(--body-sm);
+                        color: var(--text-label);
+                        opacity: .8;
+
+                        & .lower {
+                            position: relative;
+                            top: 1px; 
+                        }
+                    }
+                }
+            }
+
+            & li::before{
+                background: url('../assets/icons/star-blue.svg') no-repeat center;
+                background-size: contain;
+            }
         }
 
         & .card:nth-child(2){  
-            position: inherit;
             transform: translate(0rem , 4rem);
+
+            & .header{
+
+                & > p{
+                    font: var(--title-xs);
+                    color: var(--pink-light);
+                }
+
+                & .price{
+
+                    & p{
+                        font: var(--title-md);
+                        color: var(--text-title);
+
+                        & small{
+                            color: inherit;
+                            font: var(--title-xs);
+                        }
+
+                        & .lower {
+                            position: relative;
+                            top: 5px; 
+                        }
+                    }
+
+                    & p + small{
+                        font: var(--body-sm);
+                        color: var(--text-label);
+                        opacity: .8;
+
+                        & .lower {
+                            position: relative;
+                            top: 1.5px; 
+                        }
+                    }
+                }
+            }
+
+            & li::before{
+                background: url('../assets/icons/start-purple.svg') no-repeat center;
+                background-size: contain;
+            }
         }
 
         & .card:nth-child(3){  
-            position: inherit;
             z-index: -1;
-            transform: translate(-5rem , 8rem) rotate(8deg);
+            transform: translate(0rem , 8rem) rotate(8deg);
+
+            & .header{
+
+                & > p{
+                    font: var(--title-xs);
+                    color: var(--blue-light);
+                }
+
+                & .price{
+
+                    & p{
+                        font: var(--title-md);
+                        color: var(--text-title);
+
+                        & small{
+                            color: inherit;
+                            font: var(--title-xs);
+                        }
+
+                        & .lower {
+                            position: relative;
+                            top: 5px; 
+                        }
+                    }
+
+                    & p + small{
+                        font: var(--body-sm);
+                        color: var(--text-label);
+                        opacity: .8;
+
+                        & .lower {
+                            position: relative;
+                            top: 1px; 
+                        }
+                    }
+                }
+            }
+
+            & li::before{
+                background: url('../assets/icons/star-blue.svg') no-repeat center;
+                background-size: contain;
+            }
         }
     }
 }
