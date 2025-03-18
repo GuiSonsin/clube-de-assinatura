@@ -4,11 +4,11 @@ section.signature{
     align-items: center;
     justify-content: center;
     margin-inline: auto;
-    width: 100%;
+    width: 100%; 
+    height: 77.125234rem; 
     gap: 3.5rem;
     position: relative;
-
-    margin-bottom: 50rem;
+ 
 
     & h2{
         text-align: center;
@@ -341,14 +341,20 @@ section.signature{
 
         }
     }
-
-    & .pricing .card:nth-child(1):hover{
+ 
+    & .pricing .card:hover{
         background-color: var(--shape-hover);
-        z-index: 1; 
     }
 
-    & .pricing .card:nth-child(2):hover{
-        background-color: var(--shape-hover);
+    & .pricing .card:nth-child(1):hover{
+        z-index: 1; 
+
+        transform: translate(0rem , 7.5rem) rotate(-8deg);
+
+        box-shadow: 0 30px 100px .5px var(--shape-hover);
+    }
+
+    & .pricing .card:nth-child(2):hover{ 
         z-index: 1;
         transform: translate(0rem, 3.5rem);
         transition: transform 500ms ease-in-out; 
@@ -356,9 +362,12 @@ section.signature{
         box-shadow: 0 30px 100px .5px var(--shape-hover);
     }
 
-    & .pricing .card:nth-child(3):hover{
-        background-color: var(--shape-hover);
+    & .pricing .card:nth-child(3):hover{ 
         z-index: 1; 
+
+        transform: translate(0rem , 7.5rem) rotate(8deg);
+
+        box-shadow: 0 30px 100px .5px var(--shape-hover);
     }
 
     & .pricing img[src*= "bunny"]{
@@ -368,8 +377,24 @@ section.signature{
         height: 3.125rem;
         transition: transform 500ms ease-in-out;
     }
+
+    & .pricing .card:nth-child(1):hover ~ .stars-1 img:first-child {  
+        animation: turnRight 500ms ease-in-out forwards; 
+    }
+
+    & .pricing .card:nth-child(1):hover ~ .stars-1 img:last-child {  
+        animation: turnLeft 500ms ease-in-out forwards; 
+    }
+
+    & .pricing .card:nth-child(3):hover ~ .stars-2 img:first-child {  
+        animation: turnLeft2 500ms ease-in-out forwards; 
+    }
+
+    & .pricing .card:nth-child(3):hover ~ .stars-2 img:last-child {  
+        animation: turnRight2 500ms ease-in-out forwards; 
+    }
     
-    .pricing .card:nth-child(2):hover ~ img[src*="bunny"] {
+    & .pricing .card:nth-child(2):hover ~ img[src*="bunny"] {
         transform: translate(20rem, 0.5rem);
         z-index: 2;
     }
@@ -381,12 +406,16 @@ section.signature{
             width: 1.625rem;
             height: 1.625rem;
             transform: translate(-3rem, 8rem);
+            
+            animation: roundReverseRight 500ms ease-in-out;
         }
 
         & img:last-child{
             width: 0.8125rem;
             height: 0.8125rem;
             transform: translate(-5.5rem, 9.5rem);
+
+            animation: roundReverseLeft 500ms ease-in-out;
         }
     }
     
@@ -397,12 +426,98 @@ section.signature{
             width: 1.625rem;
             height: 1.625rem;
             transform: translate(53rem, 35rem);
+
+            animation: roundReverseLeft2 500ms ease-in-out;
         }
         
         & img:last-child{
             width: 0.8125rem;
             height: 0.8125rem;
             transform: translate(49.5rem, 36rem);
+
+            animation: roundReverseRight2 500ms ease-in-out;
         }
+    }
+}
+
+@keyframes turnRight {
+    from {
+        transform: translate(-3rem, 8rem) rotate(0);
+    }
+    
+    to {
+        transform: translate(-3rem, 8rem) rotate(-20deg);
+    }
+}
+
+@keyframes turnLeft {
+    from {
+        transform: translate(-5.5rem, 9.5rem) rotate(0);
+    }
+    
+    to {
+        transform: translate(-5.5rem, 9.5rem) rotate(20deg);
+    }
+}
+
+@keyframes roundReverseRight {
+    from {
+        transform: translate(-3rem, 8rem) rotate(-20deg);
+    }
+
+    to {
+        transform: translate(-3rem, 8rem) rotate(0deg);
+    }
+}
+
+@keyframes roundReverseLeft {
+    from {
+        transform: translate(-5.5rem, 9.5rem) rotate(20deg);
+    }
+
+    to {
+        transform: translate(-5.5rem, 9.5rem) rotate(0deg);
+    }
+}
+
+/* ------------------------------------------------------------ */
+
+@keyframes turnRight2 {
+    from {
+        transform: translate(49.5rem, 36rem) rotate(0);
+    }
+    
+    to {
+        transform: translate(49.5rem, 36rem) rotate(-20deg);
+    }
+}
+
+@keyframes turnLeft2 {
+    from {
+        transform: translate(53rem, 35rem) rotate(0);
+    }
+    
+    to {
+        transform: translate(53rem, 35rem) rotate(20deg);
+    }
+}
+
+@keyframes roundReverseRight2 {
+    from {
+        transform: translate(49.5rem, 36rem) rotate(-20deg);
+    }
+
+    to {
+        transform: translate(49.5rem, 36rem) rotate(0deg);
+    }
+}
+
+@keyframes roundReverseLeft2 {
+    from {
+        transform: translate(53rem, 35rem) rotate(20deg);
+    }
+
+    to {
+        transform: translate(53rem, 35rem) rotate(0deg);
     }
 }
