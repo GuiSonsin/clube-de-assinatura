@@ -440,6 +440,8 @@ section.signature{
     }
 }
 
+/* ---------- Left Stars -------------*/
+
 @keyframes turnRight {
     from {
         transform: translate(-3rem, 8rem) rotate(0);
@@ -480,7 +482,7 @@ section.signature{
     }
 }
 
-/* ------------------------------------------------------------ */
+/* ---------- Right Stars ------------ */
 
 @keyframes turnRight2 {
     from {
