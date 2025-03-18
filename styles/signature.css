@@ -49,6 +49,18 @@ section.signature{
         display: flex;
         flex-direction: row; 
 
+        & a{
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            align-items: center;
+            justify-content: center;
+            color: var(--text-title);
+            font: var(--button);
+            padding: .75rem;
+            border-radius: .5rem;
+        }
+
         & .card{
             display: flex;
             flex-direction: column; 
@@ -64,6 +76,12 @@ section.signature{
         }
 
         & .header{
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+        }
+
+        & .content{
             display: flex;
             flex-direction: column;
             gap: 1.5rem;
@@ -114,6 +132,10 @@ section.signature{
                 background: url('../assets/icons/star-blue.svg') no-repeat center;
                 background-size: contain;
             }
+
+            & a{
+                background-color: var(--blue-dark);
+            }
         }
 
         & .card:nth-child(2){  
@@ -159,6 +181,10 @@ section.signature{
             & li::before{
                 background: url('../assets/icons/start-purple.svg') no-repeat center;
                 background-size: contain;
+            }
+
+            & a{
+                background-color: var(--pink-dark);
             }
         }
 
@@ -207,6 +233,11 @@ section.signature{
                 background: url('../assets/icons/star-blue.svg') no-repeat center;
                 background-size: contain;
             }
+
+            & a{
+                background-color: var(--blue-dark);
+            }
+
         }
     }
 }
