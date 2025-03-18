@@ -26,6 +26,9 @@ section.signature{
         padding: 2rem;
         position: relative;
         justify-content: space-between;
+
+        transition: transform 500ms ease-in-out;
+
     }
 
     & ul{
@@ -55,6 +58,7 @@ section.signature{
         display: flex;
         flex-direction: row; 
         position: relative;
+        z-index: 1;
 
         & a{
             display: flex;
@@ -100,7 +104,7 @@ section.signature{
             gap: 1.5rem;
         }
 
-        & .card:nth-child(4){  
+        & .card:nth-child(1){  
             z-index: -1;
             transform: translate(0rem , 8rem) rotate(-8deg);
 
@@ -179,7 +183,7 @@ section.signature{
             }
         }
 
-        & .card:nth-child(5){  
+        & .card:nth-child(2){  
             transform: translate(0rem , 4rem);
 
             & .header{
@@ -257,7 +261,7 @@ section.signature{
             }
         }
 
-        & .card:nth-child(6){  
+        & .card:nth-child(3){  
             z-index: -1;
             transform: translate(0rem , 8rem) rotate(8deg);
 
@@ -338,11 +342,36 @@ section.signature{
         }
     }
 
+    & .pricing .card:nth-child(1):hover{
+        background-color: var(--shape-hover);
+        z-index: 1; 
+    }
+
+    & .pricing .card:nth-child(2):hover{
+        background-color: var(--shape-hover);
+        z-index: 1;
+        transform: translate(0rem, 3.5rem);
+        transition: transform 500ms ease-in-out; 
+
+        box-shadow: 0 30px 100px .5px var(--shape-hover);
+    }
+
+    & .pricing .card:nth-child(3):hover{
+        background-color: var(--shape-hover);
+        z-index: 1; 
+    }
+
     & .pricing img[src*= "bunny"]{
         position: absolute;
-        transform: translate(20rem, 0.9rem);
+        transform: translate(20rem, 1rem);
         width: 2.8125rem;
         height: 3.125rem;
+        transition: transform 500ms ease-in-out;
+    }
+    
+    .pricing .card:nth-child(2):hover ~ img[src*="bunny"] {
+        transform: translate(20rem, 0.5rem);
+        z-index: 2;
     }
 
     & .pricing .stars-1{
