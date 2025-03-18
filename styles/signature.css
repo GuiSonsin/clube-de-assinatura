@@ -1,3 +1,47 @@
 section.signature{
-    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-inline: auto;
+    width: 100%;
+    gap: 3.5rem;
+    position: relative;
+
+    margin-bottom: 50rem;
+
+    & h2{
+        text-align: center;
+    }
+
+    & .card{
+        border: 1px solid var(--shape-stroke);
+        border-radius: 1.5rem;
+        background-color: var(--shape-base);
+        width: 18rem;
+        height: 26rem;
+    }
+
+    & .pricing{
+        display: flex;
+        flex-direction: row;
+        gap: 5rem;  
+
+        & .card:nth-child(1){  
+            position: inherit;
+            z-index: -1;
+            transform: translate(5rem , 8rem) rotate(-8deg);
+        }
+
+        & .card:nth-child(2){  
+            position: inherit;
+            transform: translate(0rem , 4rem);
+        }
+
+        & .card:nth-child(3){  
+            position: inherit;
+            z-index: -1;
+            transform: translate(-5rem , 8rem) rotate(8deg);
+        }
+    }
 }
