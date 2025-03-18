@@ -20,6 +20,12 @@ section.signature{
         background-color: var(--shape-base);
         width: 18rem;
         height: 26rem;
+
+        display: flex;
+        flex-direction: column; 
+        padding: 2rem;
+        position: relative;
+        justify-content: space-between;
     }
 
     & ul{
@@ -48,6 +54,7 @@ section.signature{
     & .pricing{
         display: flex;
         flex-direction: row; 
+        position: relative;
 
         & a{
             display: flex;
@@ -61,12 +68,17 @@ section.signature{
             border-radius: .5rem;
         }
 
-        & .card{
-            display: flex;
-            flex-direction: column; 
-            padding: 2rem;
-            position: relative;
-            justify-content: space-between;
+        & .card .popular{
+            position: absolute;
+            top: 1.5625rem;
+            right: 1.5625rem;
+            color: var(--text-body);
+            font: var(--tag);
+
+            background-color: var(--shape-stroke);
+            border-radius: 9999px;
+
+            padding: 0.5625rem 1.25rem;
         }
 
         & .price{
@@ -87,7 +99,7 @@ section.signature{
             gap: 1.5rem;
         }
 
-        & .card:nth-child(1){  
+        & .card:nth-child(4){  
             z-index: -1;
             transform: translate(0rem , 8rem) rotate(-8deg);
 
@@ -138,7 +150,7 @@ section.signature{
             }
         }
 
-        & .card:nth-child(2){  
+        & .card:nth-child(5){  
             transform: translate(0rem , 4rem);
 
             & .header{
@@ -188,7 +200,7 @@ section.signature{
             }
         }
 
-        & .card:nth-child(3){  
+        & .card:nth-child(6){  
             z-index: -1;
             transform: translate(0rem , 8rem) rotate(8deg);
 
@@ -238,6 +250,45 @@ section.signature{
                 background-color: var(--blue-dark);
             }
 
+        }
+    }
+
+    & .pricing img[src*= "bunny"]{
+        position: absolute;
+        transform: translate(20rem, 0.9rem);
+        width: 2.8125rem;
+        height: 3.125rem;
+    }
+
+    & .pricing .stars-1{
+        position: absolute;
+
+        & img:first-child{
+            width: 1.625rem;
+            height: 1.625rem;
+            transform: translate(-3rem, 8rem);
+        }
+
+        & img:last-child{
+            width: 0.8125rem;
+            height: 0.8125rem;
+            transform: translate(-5.5rem, 9.5rem);
+        }
+    }
+    
+    & .pricing .stars-2{
+        position: absolute;
+
+        & img:first-child{
+            width: 1.625rem;
+            height: 1.625rem;
+            transform: translate(53rem, 35rem);
+        }
+        
+        & img:last-child{
+            width: 0.8125rem;
+            height: 0.8125rem;
+            transform: translate(49.5rem, 36rem);
         }
     }
 }
