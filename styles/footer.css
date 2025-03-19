@@ -6,6 +6,7 @@ footer{
     display: flex;
     overflow: hidden;
     margin-inline: auto;
+
     & > img { 
         max-width: 80rem;
         width: 80rem;
@@ -38,10 +39,32 @@ footer{
         & .icons-link{
             display: flex;
             flex-direction: row;
-            gap: 1.5rem;
+            gap: 4.8px;
             width: 100%;
-            cursor: pointer;
+
+            & svg{ 
+                color: #358BB9;   
+                
+            }
+
+            & a{
+                display: flex;
+                padding: 10px;
+                width: 2.5rem;
+                height: 2.5rem;
+                align-items: center;
+                justify-content: center;
+            }
         }
+
+        & .icons-link a:hover{
+            background-color: var(--shape-stroke);  
+            border-radius: 999999px;  
+
+            & svg{
+                color: var(--text-body);
+            }
+        } 
     }
 
     & .info{ 
@@ -65,7 +88,6 @@ footer{
         & a:hover{
             color: var(--text-body);
         }
-        
 
         & .content,
         & .help{
