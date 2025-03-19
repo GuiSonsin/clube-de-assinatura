@@ -45,7 +45,11 @@
 }
 
 body{ 
-    background-color: var(--shape-background);  
+    background-color: var(--shape-background); 
+}
+
+body, html{  
+    scroll-behavior: smooth;
 }
 
 a{
